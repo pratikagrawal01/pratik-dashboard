@@ -1,0 +1,158 @@
+{
+  "BC": {
+    "US": {
+        "Item API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item/actions"
+        },
+        "Location API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item_location/actions"
+        },
+        "Item Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item_stage_to_live/actions"
+        },
+        "Location Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_stage_to_live/actions"
+        },
+        "Item API History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item/history"
+        },
+        "Location History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item_location/history"
+        },
+        "Item Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item_stage_to_live/history"
+        },
+        "Location Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_stage_to_live/history"
+        },
+		"Query": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_com/query/www_costco_com_search"
+        }
+    },
+    "CA": {
+        "Item API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item/actions"
+        },
+        "Location API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_location/actions"
+        },
+        "Item Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_stage_to_live/actions"
+        },
+        "Location Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_stage_to_live/actions"
+        },
+        "Item API History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item/history"
+        },
+        "Location History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_location/history"
+        },
+        "Item Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_stage_to_live/history"
+        },
+        "Location Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_stage_to_live/history"
+        },
+		"Query": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_ca/query/www_costco_ca_search"
+        }
+    }
+  },
+  "BD": {
+    "US": {
+        "Item API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_item/actions"
+        },
+        "Location API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_item_location/actions"
+        },
+        "Item Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_item_stage_to_live/actions"
+        },
+        "Location Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_stage_to_live/actions"
+        },
+        "Item API History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_item/history"
+        },
+        "Location History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_item_location/history"
+        },
+        "Item Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_item_stage_to_live/history"
+        },
+        "Location Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_stage_to_live/history"
+        },
+		"Query": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/query/www_costcobusinessdelivery_com_search"
+        }
+    },
+    "CA": {
+        "Item API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_item/actions"
+        },
+        "Location API": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_item_location/actions"
+        },
+        "Item Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_item_stage_to_live/actions"
+        },
+        "Location Stg-Live": {
+            "METHOD":"POST",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_stage_to_live/actions"
+        },
+        "Item API History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_item/history"
+        },
+        "Location History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_item_location/history"
+        },
+        "Item Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_item_stage_to_live/history"
+        },
+        "Location Stg-Live History": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_stage_to_live/history"
+        },
+		"Query": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/query/www_costcobusinesscentre_ca_search"
+        }
+    }
+  }
+}

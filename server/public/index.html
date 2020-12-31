@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Pratik Agrawal">
+  <title>Costco Lucid Api Repository</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+
+<div class="container-fluid">	
+	<br>
+	<div class="container-fluid">
+		<div class="row">	
+			 <div class="col-4">
+				<div class="container-fluid site">
+					  <ul class="nav nav-pills" >
+						<li class="nav-item">
+						  <a class="nav-link active" data-toggle="pill" href="#home">BC</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" href="#menu1">BD</a>
+						</li>
+					  </ul>
+				</div>
+			</div>
+			 <div class="col-5">
+				<div class="container-fluid application">
+					  <ul class="nav nav-pills" >
+						<li class="nav-item">
+						  <a class="nav-link active" data-toggle="pill" id='api' href="#home">API</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" id='feed' href="#menu1">Feed</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" id='vm' href="#menu1">VMs</a>
+						</li>
+					  </ul>
+				</div>
+			</div>
+		</div>
+	</div><br><br>	
+	
+	<div class="container-fluid api" id="api">
+		<div class="container-fluid environment">
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-9">
+					  <ul class="nav nav-pills" >
+						<li class="nav-item">
+						  <a class="nav-link active" data-toggle="pill" href="#env1">DEV</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" href="#env2">QA</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" href="#env2">QA2</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" href="#env2">QA3</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" href="#env3">PERF</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" data-toggle="pill" href="#env4">PROD</a>
+						</li>
+					  </ul>
+				</div>
+			</div>
+		</div>
+	  <br><br>
+		<div class="row location-row">
+			<div class="col-1">
+				<ul class="nav nav-pills" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link location" href="#home">US</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-11">
+				<div class="row">				
+					<div class="col-2"><a href="#" class="action-button shadow animate red">Item API</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate red">Location API</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate red">Item Stg-Live</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate red">Location Stg-Live</a> </div>
+					 <div class="col-1"> </div>
+					 <div class="col-3"> <input class="input-param" type="text" id="queryParam" placeholder="_stage?q=kirkland&loc=847" ></div>
+				</div>
+				<div class="row">
+					<div class="col-2"><a href="#" class="action-button shadow animate green">Item API History</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Location History</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Item Stg-Live History</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Location Stg-Live History</a> </div>
+					 <div class="col-2"> </div>
+					 <div class="col-1"> <a href="#" class="action-button shadow animate green">Query</a> </div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="row  location-row">
+			<div class="col-1">
+				<ul class="nav nav-pills" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link location" href="#home">CA</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-11">
+				<div class="row">				
+					<div class="col-2"><a href="#" class="action-button shadow animate red">Item API</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate red">Location API</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate red">Item Stg-Live</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate red">Location Stg-Live</a> </div>
+					 <div class="col-1"> </div>
+					 <div class="col-3"> <input class="input-param" type="text" id="queryParam" placeholder="_stage?kirkland&loc=894" ></div>
+				</div>
+				<div class="row">
+					<div class="col-2"><a href="#" class="action-button shadow animate green">Item API History</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Location History</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Item Stg-Live History</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Location Stg-Live History</a> </div>
+					 <div class="col-2"> </div>
+					 <div class="col-1"> <a href="#" class="action-button shadow animate green">Query</a> </div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="container-fluid feed" id="feed">
+		<div class="container-fluid environment">
+				<div class="row">
+					<div class="col-3"></div>
+					<div class="col-9">
+						  <ul class="nav nav-pills" >
+							<li class="nav-item">
+							  <a class="nav-link active" data-toggle="pill" href="#env1">DEV</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" data-toggle="pill" href="#env2">QA</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" data-toggle="pill" href="#env2">QA2</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" data-toggle="pill" href="#env2">QA3</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" data-toggle="pill" href="#env3">PERF</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" data-toggle="pill" href="#env4">PROD</a>
+							</li>
+						  </ul>
+					</div>
+				</div>
+			</div>
+		  <br><br>
+		<div class="row  location-row">
+			<div class="col-1">
+				<ul class="nav nav-pills" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link location" href="#home">US</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-11">
+				<div class="row">				
+					<div class="col-2"><a href="#" class="action-button shadow animate red">Full Master Catalog</a> </div>	
+					<div class="col-2"><a href="#" class="action-button shadow animate red">Full Master FFM</a> </div>					
+					 <div class="col-1"> </div>
+					 <div class="col-4"> <input class="input-param" type="text" id="queryParam" placeholder="itemnumber"/></div>
+				</div>
+				<div class="row">
+					<div class="col-2"><a href="#" class="action-button shadow animate green">Full LW Catalog</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Full LW FFM</a> </div>
+					  <div class="col-1"> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Sync Master</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Sync FFM</a> </div>
+				</div>
+			</div>	
+		</div><br><br><br>
+		<div class="row  location-row">
+			<div class="col-1">
+				<ul class="nav nav-pills" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link location" href="#home">CA</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-11">
+				<div class="row">				
+					<div class="col-2"><a href="#" class="action-button shadow animate red">Full Master Catalog</a> </div>	
+					<div class="col-2"><a href="#" class="action-button shadow animate red">Full Master FFM</a> </div>					
+					 <div class="col-1"> </div>
+					 <div class="col-4"> <input class="input-param" type="text" id="queryParam" placeholder="itemnumber" /></div>
+				</div>
+				<div class="row">
+					<div class="col-2"><a href="#" class="action-button shadow animate green">Full LW Catalog</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Full LW FFM</a> </div>
+					  <div class="col-1"> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Sync Master</a> </div>
+					 <div class="col-2"> <a href="#" class="action-button shadow animate green">Sync FFM</a> </div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="container-fluid vm" id="vm">
+		<div class="container-fluid environment">
+				<div class="row">
+					<div class="col-2"></div>
+					<div class="col-2">						
+						  <ul class="nav nav-pills" >
+							<li class="nav-item">
+							  <p class="nav-link" href="#env1">DIT BATCH</p>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Dit1</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Dit2</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Dit3</a>
+							</li>								
+						  </ul>						  
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Dit4</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Dit5</a>
+							</li>								
+						  </ul>
+					</div>
+					<div class="col-2">						
+						  <ul class="nav nav-pills" >
+							<li class="nav-item">
+							  <p class="nav-link" href="#env1">QA BATCH</p>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">QA1</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">QA2</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">QA3</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">QA4</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">QA5</a>
+							</li>								
+						  </ul>
+					</div>
+					<div class="col-2">						
+						  <ul class="nav nav-pills" >
+							<li class="nav-item">
+							  <p class="nav-link" href="#env1">J BATCH</p>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Jbatch01</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Jbatch02</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">Jbatch03</a>
+							</li>								
+						  </ul>
+					</div>
+					<div class="col-2">						
+						  <ul class="nav nav-pills" >
+							<li class="nav-item">
+							  <p class="nav-link" href="#env1">Jump Box</p>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">etvqatools01</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">etvqatools02</a>
+							</li>								
+						  </ul>
+						  <ul class="nav nav-pills" >
+							<li class="nav-link">
+							  <a href="#" class="vm action-button shadow animate green">etvqatools03</a>
+							</li>								
+						  </ul>
+					</div>
+				</div>
+			</div>
+		  <br><br>
+	</div>
+	<br><br><br>
+	<div id="resizer" class="resizer"><span></span><div id="width-readout" class="width-readout">1920px</div></div>
+	<div class="container-fluid lucid-output">	
+		  <textarea readonly class="form-control" rows="10" id="lucid-output-data"></textarea>
+	</div>	  
+</div>
+
+<div class="overlay"></div>
+	<script type="text/javascript">
+		$(function() {				
+			header.init();
+		});	
+	</script>
+</body>
+<script type="text/javascript" src="/js/header.js"></script>
+</html>

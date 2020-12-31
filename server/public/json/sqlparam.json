@@ -1,0 +1,120 @@
+{
+	"BC": {
+		"DEV": {
+			"STAGE": {
+				"HOST": "172.24.112.129",
+				"PORT": "50000",
+				"NAME" : "WCSDW05"
+			},
+			"LIVE": {
+				"HOST": "172.24.112.128",
+				"PORT": "50000",
+				"NAME" : "WCSD05="
+			}
+		},
+		"QA1": {
+			"STAGE": {
+				"HOST": "172.24.112.161",
+				"PORT": "50000",
+				"NAME" : "wcsqw01"
+			},
+			"LIVE": {
+				"HOST": "172.24.112.160",
+				"PORT": "50000",
+				"NAME" : "wcsqw01"
+			}
+		},
+		"QA2": {
+			"STAGE": {
+				"HOST": "172.24.112.193",
+				"PORT": "50000",
+				"NAME" : "wcsqw02"
+			},
+			"LIVE": {
+				"HOST": "172.24.112.192",
+				"PORT": "50000",
+				"NAME" : "wcsq02"
+			}
+		},
+		"QA3": {
+			"STAGE": {
+				"HOST": "172.24.112.225",
+				"PORT": "50000",
+				"NAME" : "wcsqw03"
+			},
+			"LIVE": {
+				"HOST": "172.24.112.224",
+				"PORT": "50000",
+				"NAME" : "wcsq03"
+			}
+		},
+		"PERF": {
+			"STAGE": {
+				"HOST": "172.24.112.129",
+				"PORT": "50000",
+				"NAME" : "WCSDW05"
+			},
+			"LIVE": {
+				"HOST": "172.24.112.128",
+				"PORT": "50000",
+				"NAME" : "WCSD05="
+			}
+		},
+		"PROD": {
+			"STAGE": {
+				"HOST": "172.24.112.129",
+				"PORT": "50000",
+				"NAME" : "WCSDW05"
+			},
+			"LIVE": {
+				"HOST": "172.24.112.128",
+				"PORT": "50000",
+				"NAME" : "WCSD05="
+			}
+		},
+		"US": {
+				"Sync Master": [{
+								"ENV": "S",
+								"STOREID":"10301",
+								"WAREHOUSE":"847",
+								"LANGUAGEID":"-1",
+								"FEEDTYPE":"D",
+								"ACTION":"U"
+				}],
+				"Sync FFM": [{
+								"ENV": "L",
+								"STOREID":"10301",
+								"WAREHOUSE":"847",
+								"LANGUAGEID":"-1",
+								"FEEDTYPE":"I",
+								"ACTION":"U"
+				}]
+			 },
+		"CA": {
+				"Sync Master": [{
+								"ENV": "S",
+								"STOREID":"10302",
+								"WAREHOUSE":"894",
+								"LANGUAGEID":"-24",
+								"FEEDTYPE":"D",
+								"ACTION":"U"
+				},
+				{
+								"ENV": "S",
+								"STOREID":"10302",
+								"WAREHOUSE":"894",
+								"LANGUAGEID":"-25",
+								"FEEDTYPE":"D",
+								"ACTION":"U"
+				}],
+				"Sync FFM": [{
+								"ENV": "L",
+								"STOREID":"10302",
+								"WAREHOUSE":"894",
+								"LANGUAGEID":"-24",
+								"FEEDTYPE":"I",
+								"ACTION":"U"
+				}]
+			 }			 
+		}
+	}

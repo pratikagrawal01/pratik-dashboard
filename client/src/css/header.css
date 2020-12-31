@@ -1,0 +1,24 @@
+.header-content{
+    display:flex;    
+    -webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.12);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.233);     
+    justify-content: flex-end;
+}
+.logo-container {
+    margin:20px 5px 5px 5px;
+    justify-self: center;
+}
+
+.logo-container img {
+    height:3vh;   
+}
+
+.apps-logo{    
+    margin:20px 20px 5px 5px;    
+    justify-self: center;
+}
+
+.apps-logo img{
+    height:3vh;
+
+}

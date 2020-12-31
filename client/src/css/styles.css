@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    background:black;
+    color:rgb(199, 197, 197);    
+}
+
+main {
+    height:100vh;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 10fr .5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header-content header-content header-content"
+        "site-links api-links api-links"
+        "env-links env-links env-links"
+        "api-display api-display api-display"
+        "footer-content footer-content footer-content";
+}
+
+.header-content {
+    grid-area:header-content;
+}
+
+.site-links {
+    width:50%;
+    grid-area:site-links;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.api-links{
+    width:50%;
+    grid-area:api-links;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.env-links {
+    grid-area:env-links;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.api-display{
+    grid-area:api-display;
+    height:100%;
+}
+
+.footer-content {
+    grid-area:footer-content;    
+    align-content: center;
+    display:flex;
+    justify-content: center;
+}
+
+.nav-link {
+    position: relative;    
+	padding: .5rem 2rem;
+    margin: 0px 10px 10px 0px;
+    border-radius:.4rem;
+	font-family: cursive;
+	font-size: 1.3rem;
+	color:rgb(199, 197, 197);
+	text-decoration: none;	
+}
+
+a.nav-link.active {	
+	background-color: #b78d11fc;
+}
+
+.env-links a.nav-link.active {	
+	background-color: #007bff;
+}
+
+
+.google-login{
+    margin:20px;
+    display:flex;
+    height:100vh;
+    flex-direction: column;
+}
+
+.login-msg{
+    margin:30px 0px 10px 0px;
+    font-family:'Times New Roman', Times, serif;    
+    color:#f5f5f5;
+}
+
+.sign-in {    
+    
+}
+
+@media screen and (max-width: 1300px){
+    main {
+        height:100vh;
+        display:grid;
+        grid-template-rows: .1fr 1fr 1fr 1fr 10fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header-content"
+            "site-links"
+            "api-links"
+            "env-links"
+            "api-display"
+            "footer-content";
+    }
+    *{
+       font-size:10px;
+    }
+    .api-links{
+        justify-content: left;    
+    }
+
+    .env-links {
+        justify-content: left;   
+        align-content: flex-start; 
+    }
+}
