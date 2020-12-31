@@ -3,12 +3,14 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const router = express.Router();
 const logger = require('./Logger.js');
+const CONSTANTS = require('./Constants.js');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 router.use(cookieParser());
 
 const {OAuth2Client} = require('google-auth-library');
+const { ConsoleTransportOptions } = require('winston/lib/winston/transports');
 const CLIENT_ID='809312429334-6pqlrjvg3gnrmtlguge3akdk9155gt6e.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
@@ -26,12 +28,12 @@ router.post('/validateLogin',  function(req,res){
             .then((ticket)=>{
                 const payload = ticket.getPayload();
                 const domain =  payload['hd'];
-                if(domain=='costco.com'){
-                    res.cookie('session-token', token);
-                    res.cookie('auth-user', payload['name']);
-                    res.jsonp('success');
+                if(domain==CONSTANTS._DOMAIN){
+                    res.cookie(CONSTANTS._SESSION_TOKEN, token);
+                    res.cookie(CONSTANTS._AUTH_USER, payload['name']);
+                    res.jsonp(CONSTANTS._SUCCESS);
                 }else {
-                    res.jsonp('Authentication Failure');
+                    res.jsonp(CONSTANTS._ERROR_AUTHENTICATION_FAILURE);
                 }
             })
             .catch(console.error);		
@@ -39,7 +41,7 @@ router.post('/validateLogin',  function(req,res){
 
     
 const CheckUserAuthenticated = (req,res,next) => {	
-    const token = req.cookies['session-token'];
+    const token = req.cookies[CONSTANTS._SESSION_TOKEN];
 	async function verify() {
 		  const ticket = await client.verifyIdToken({
 			  idToken: token,
@@ -51,15 +53,15 @@ const CheckUserAuthenticated = (req,res,next) => {
 		.then((ticket)=>{
             const payload = ticket.getPayload();
             const domain =  payload['hd'];
-            if(domain=='costco.com'){
+            if(domain==CONSTANTS._DOMAIN){
                 next();
             }else {
-                res.jsonp('Authentication Failure');
+                res.jsonp(CONSTANTS._ERROR_AUTHENTICATION_FAILURE);
             }			
 		})
 		.catch(err=> {
 			(console.error);		
-			res.jsonp('Authentication Failure');
+			res.jsonp(CONSTANTS._ERROR_AUTHENTICATION_FAILURE);
 		});	
 };
 

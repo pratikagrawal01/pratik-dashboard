@@ -205,3 +205,8 @@ pre{
 }
 
 .key { color: green; }
+
+.overlay{
+  opacity:.5;
+}
+

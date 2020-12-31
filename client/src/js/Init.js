@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/main.css';
 
 /**This is to bind navigation link in the Index Api page for focus-unfocus*/
 function Init_Nav_Link(){
@@ -13,23 +14,26 @@ function Init_Nav_Link(){
 
 /**This is to bind action-bution to make a backend api call to node server */
 function Init_Action_Button(){
-    const makeApiCall = el => {
-       fetch('/lcudiApi', {
+    const makeApiCall = el => {        
+        document.querySelector('body').classList.add('overlay');
+        fetch('/lcudiApi', {
            method:'POST',
            dataType:'jsonp',
            headers:{
                "Content-Type": "application/json"
            },
            body:JSON.stringify(CreateQueryObject(el))
-       }).then((result)=>{
-           result.json().then((resp)=>{
+        }).then((result)=>{
+            document.querySelector('body').classList.remove('overlay');
+            result.json().then((resp)=>{
                document.querySelector('.lucid-output').querySelector('span').innerHTML=SyntaxHighlight(resp);
                if(resp=='Authentication Failure'){
                     window.location.replace("/login");
                }
            })
        }).catch(err=>{
-           console.log(err);           
+            document.querySelector('body').classList.remove('overlay');
+            console.log(err);           
        })
     }
   

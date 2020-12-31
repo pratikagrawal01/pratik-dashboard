@@ -6,11 +6,19 @@ import { BrowserRouter as Router, Switch , Route } from 'react-router-dom';
 
 function App(){
   return(
-   <Router>
-    <Route path="/login" component ={RouteLogin} />
-    <Route path="/index" component ={RouteMain} />  
-    <Route path="/" component ={RouteMain} />  
-    </Router>
+    <Router>
+      <Switch> 
+        <Route path="/login">
+          <RouteLogin />
+        </Route>
+        <Route path="/index">
+          <RouteMain />
+        </Route>
+        <Route path="/">
+          <RouteMain />
+        </Route>
+      </Switch>
+    </Router>    
   )
 }
 

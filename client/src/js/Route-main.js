@@ -21,6 +21,7 @@ function RouteMain(){
         <EnvLinks />
         <IndexApiDisplay />
         <Footer />
+        <div id="spinner"></div>
       </main>
     </div>    
   )
