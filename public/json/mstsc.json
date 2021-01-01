@@ -1,0 +1,38 @@
+{
+  "BC": { 
+    "Dit1": "edv1batch01",
+	"Dit2": "edv2batch01",
+	"Dit3": "edv3batch01",
+	"Dit4": "edv4batch01",
+	"Dit5": "edv5batch01",
+	"QA1": "etv1batch01",
+	"QA2": "etv2batch01",
+	"QA3": "etv3batch01",
+	"QA4": "etv4batch01",
+	"QA5": "etv5batch01",
+	"Jbatch01": "etv2jbatch01",
+	"Jbatch02": "etv2jbatch02",
+	"Jbatch03": "etv2jbatch03",
+	"etvqatools01": "etvqatools01.ecd.costco.com",
+	"etvqatools02": "etvqatools02.ecd.costco.com",
+	"etvqatools03": "etvqatools03.ecd.costco.com"
+  },
+  "BD": { 
+    "Dit1": "edv1bdbatch01",
+  	"Dit2": "edv2bdbatch01",
+  	"Dit3": "edv3bdbatch01",
+  	"Dit4": "edv4bdbatch01",
+  	"Dit5": "edv5bdbatch01",
+  	"QA1": "etv1bdbatch01",
+  	"QA2": "etv2bdbatch01",
+  	"QA3": "etv3bdbatch01",
+  	"QA4": "etv4bdbatch01",
+  	"QA5": "etv5bdbatch01",
+  	"Jbatch01": "etv2jbatch01",
+  	"Jbatch02": "etv2jbatch02",
+  	"Jbatch03": "etv2jbatch03",
+  	"etvqatools01": "etvqatools01.ecd.costco.com",
+  	"etvqatools02": "etvqatools02.ecd.costco.com",
+  	"etvqatools03": "etvqatools03.ecd.costco.com"
+  }
+}
