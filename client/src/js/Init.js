@@ -1,4 +1,3 @@
-import React from 'react';
 import '../css/main.css';
 
 /**This is to bind navigation link in the Index Api page for focus-unfocus*/
