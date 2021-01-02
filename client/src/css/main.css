@@ -169,7 +169,7 @@
       overflow:auto;   
   }
 
-  @media screen and (max-width: 1300px){
+  @media screen and (max-width: 1024px){
     .index-api-display{
         display:grid;
         margin:10px;

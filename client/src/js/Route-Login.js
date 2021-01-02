@@ -8,7 +8,7 @@ import '../css/styles.css';
 function RouteLogin(){
   const history = useHistory();
   const responseGoogle=(res)=>{
-      fetch('/validateLogin', {
+      fetch('/api/validateLogin', {
             method:'POST',
             dataType:'jsonp',
             headers:{

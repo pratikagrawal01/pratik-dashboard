@@ -7,7 +7,7 @@ import '../css/main.css';
 
 const makeApiCall = el => {        
     document.querySelector('body').classList.add('overlay');
-    fetch('/lcudiApi', {
+    fetch('/api/lcudiApi', {
        method:'POST',
        dataType:'jsonp',
        headers:{
