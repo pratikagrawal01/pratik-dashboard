@@ -1,11 +1,14 @@
 import React from 'react';
 
 import {CreateQueryObject, SyntaxHighlight} from './Util';
-
-import '../css/main.css';
+import IosHelp from 'react-ionicons/lib/MdHelp';
+import IosHeart from 'react-ionicons/lib/MdHeart';
+import IosEye from 'react-ionicons/lib/MdEye';
+import IosArrowRight from 'react-ionicons/lib/MdArrowDropright';
+import '../css/sidebar.css';
     
 
-const makeApiCall = el => {        
+const makeApiCall = el => {          
     document.querySelector('body').classList.add('overlay');
     fetch('/api/lcudiApi', {
        method:'POST',
@@ -28,50 +31,47 @@ const makeApiCall = el => {
    })
 }
 
-function IndexApiBuild(props){  
-
-    return(       
-            <div className="index-api-display">	
-                <div className="location-links">
-				  <a className="nav-link location" href="#home">{props.site}</a>
-				</div>
-                <div className="index-api">	
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate red" id="Item API">Item API</a>
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate red" id="Location API">Location API</a>
-                </div>
-                <div className="stage-live-api">
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate red" id="Item Stg-Live">Item Stg-Live</a>
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate red" id="Location Stg-Live">Location Stg-Live</a>
-                </div>
-                <div className="index-api-history">	
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate green" id="Item API History">Item API History</a>
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate green" id="Location History">Location History</a>
-                </div>
-                <div className="stage-live-api-history">
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate green" id="Item Stg-Live History">Item Stg-Live History</a>
-                    <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate green" id="Location Stg-Live History">Loc Stg-Live History</a>
-                </div>
-                <div className="index-input-param">
-                    <input className="input-param" type="text" id="queryParam" placeholder="_stage?q=kirkland&loc=847" />
-                </div>
-                <div className="index-query-button">
-                     <a href="#" onClick={(el)=> makeApiCall(el)} className="action-button shadow animate green" id="Query">Query</a>
-                </div>
-            </div>
-    )
-}
 function IndexApiDisplay(){
     return(
         <div className="api-display">
-            <div className="api-body-main">
-                <IndexApiBuild site="US"/>
-                <br/><br/>
-                <IndexApiBuild site="CA"/>               
+            <div className="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                            <IosHeart color="red" fontSize="1.2rem" beat={true}/>Item<IosArrowRight color="white" fontSize=".8rem"/></a>
+                                <ul className="sidebar-sub-menu">
+                                    <li><a id="Item-Api" href="#" onClick={el => makeApiCall(el)}>Trigger Indexing</a></li>
+                                    <li><a id="Item-Api-History" href="#" onClick={el => makeApiCall(el)}>Get Index History</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><i className="fas fa-qrcode"></i>Item-Location<IosArrowRight color="white" fontSize=".8rem"/></a>
+                                <ul className="sidebar-sub-menu">
+                                    <li><a id="Item-Location-Api" href="#" onClick={el => makeApiCall(el)}>Trigger Indexing</a></li>
+                                    <li><a id="Item-Location-Api-History" href="#" onClick={el => makeApiCall(el)}>Get Index History</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><i className="fas fa-qrcode"></i>Item-Stage-Prop<IosArrowRight color="white" fontSize=".8rem"/></a>
+                                <ul className="sidebar-sub-menu">
+                                    <li><a id="Item-Stg-Live" href="#" onClick={el => makeApiCall(el)}>Trigger Stage Prop</a></li>
+                                    <li><a id="Item-Stg-Live-History" href="#" onClick={el => makeApiCall(el)}>Get Index History</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><i className="fas fa-qrcode"></i>Location-Stage-Prop<IosArrowRight color="white" fontSize=".8rem"/></a>
+                                <ul className="sidebar-sub-menu">
+                                    <li><a id="Item-Location-Stg-Live" href="#" onClick={el => makeApiCall(el)}>Trigger Stage Prop</a></li>
+                                    <li><a id="Item-Location-Stg-Live-History" href="#" onClick={el => makeApiCall(el)}>Get Index History</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><i className="fas fa-qrcode"></i>Mega-Menu</a></li>
+                        <li><a href="#"><i className="fas fa-qrcode"></i>Search-Query</a></li>
+                        <li><a href="#"><IosHelp color="white" fontSize="1.2rem" beat={true}/>About</a></li>   
+                    </ul>
+                </nav>
             </div>
             <div className="lucid-output">	
                <pre id="json-data">
-                   <span>
-                        Response from the Lucid API will be displayed here.</span>
+                   <span/>                        
                 </pre>
             </div>
         </div>

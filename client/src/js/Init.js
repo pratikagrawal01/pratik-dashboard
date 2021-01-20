@@ -13,6 +13,6 @@ function Init_Nav_Link(){
 
 /**This is to initiate and bind action buttons*/
 function Init(){
-    Init_Nav_Link();
+    Init_Nav_Link();    
 }
 export default Init;

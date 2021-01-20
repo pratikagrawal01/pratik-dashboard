@@ -1,9 +1,6 @@
 import React , {useEffect} from 'react';
 import Header from './Header';
-import SiteLinks from './Site-Links';
-import ApiLinks from './Api-Links';
-import EnvLinks from './Env-Links';
-import Footer from './Footer';
+//import Footer from './Footer';
 import IndexApiDisplay from './Index-Api-Display';
 
 import Init from './Init';
@@ -16,12 +13,12 @@ function RouteMain(){
     <div>
       <main>
         <Header />
-        <SiteLinks />
+        {/* <SiteLinks />
         <ApiLinks />
-        <EnvLinks />
+        <EnvLinks /> */}
         <IndexApiDisplay />
-        <Footer />
-        <div id="spinner"></div>
+        {/* <Footer /> */}
+        {/* <div id="spinner"></div> */}
       </main>
     </div>    
   )

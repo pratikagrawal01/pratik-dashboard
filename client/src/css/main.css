@@ -1,203 +1,23 @@
-.animate
-{
-	transition: all 0.1s;
-	-webkit-transition: all 0.1s;
-}
-
-.action-button
-{
-	position: relative;
-	padding: .5rem .5rem;
-	margin: 10px;
-	float: left;
-	border-radius: .5rem;
-	font-size: 1rem;
-	color: #FFF;
-	text-decoration: none;	
-	width:100%;
-    text-overflow:hidden;
-    white-space:nowrap;
-	text-align:center;
-}
-
-.input-param
-{
-	position: relative;
-	padding: .5rem .5rem;
-	margin: 10px;
-	border-radius: .5rem;
-	font-size: 1rem;
-	text-decoration: none;	
-	width:100%;
-	overflow:hidden;
-}
-
-.blue
-{
-	background-color: #3498DB;
-	border-bottom: 5px solid #2980B9;
-	text-shadow: 0px -2px #2980B9;
-}
-
-.red
-{
-	background-color: #E74C3C;
-	border-bottom: 5px solid #BD3E31;
-	text-shadow: 0px -2px #BD3E31;
-}
-
-.green
-{
-	background-color: #82BF56;
-	border-bottom: 5px solid #669644;
-	text-shadow: 0px -2px #669644;
-}
-
-.yellow
-{
-	background-color: #F2CF66;
-	border-bottom: 5px solid #D1B358;
-	text-shadow: 0px -2px #D1B358;
-	width:100px;
-}
-
-.action-button:active
-{
-	transform: translate(0px,5px);
-    -webkit-transform: translate(0px,5px);
-	border-bottom: 1px solid;
-}
-
-
-/* Add animation to "page content" */
-.animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
-  }
-  
-  @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
-  }
-  
-  @keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
-  }
-
-
-
-  .api-display{
+.api-display{
+    height:100%;
     display:grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr 1fr;    
+    grid-template-columns: 2fr 10fr;    
     grid-template-areas: 
         "api-body-main lucid-output"        
   }
   
   .api-body-main{
-      grid-area:api-body-main;
-  }
+    grid-area:api-body-main;
+}
 
-  .index-api-display{
-    grid-area:index-api-display;
-    display:grid;
-    margin:30px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: .2fr 1fr 1fr;    
-    grid-template-areas: 
-        "location-links index-api stage-live-api"
-        "location-links index-api-history stage-live-api-history"
-        "location-links index-input-param index-query-button";
-  }
-
-  .location-links{
-    grid-area: location-links;
-    display:flex;
-    justify-content: space-around;  
-    align-items: center; 
-  }
-
-  .index-api{
-      grid-area: index-api;
-      display:flex;
-      justify-content: space-around;      
-  }
-
- .stage-live-api{
-      grid-area: stage-live-api;
-      display:flex;
-      justify-content: space-around;
- }
-
-  .index-api-history{
-    grid-area: index-api-history;
-    display:flex;
-    justify-content: space-around;      
-  }
-
-  .stage-live-api-history{
-    grid-area: stage-live-api-history;
-    display:flex;
-    justify-content: space-around;
-  }
-
-  .index-input-param{
-      grid-area: index-input-param;
-      display:flex;
-  }
-
-  .index-query-button{
-      display:flex;
-      grid-area: index-query-button;
-  }
-
-  .index-query-button .action-button {
-      width:30%;      
-  }
-  .lucid-output{
-      grid-area: lucid-output;
-      display:flex;
-      height:75vh;
-      margin:40px 10px 10px 10px;  
-      border:2px solid;
-      padding:5px;      
-      resize:both;
-      overflow:auto;   
-  }
-
-  @media screen and (max-width: 1024px){
-    .index-api-display{
-        display:grid;
-        margin:10px;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-        grid-template-columns: 1fr 1fr;    
-        grid-template-areas: 
-            "location-links"
-            "index-api"
-            "stage-live-api"
-            "index-api-history"
-            "stage-live-api-history"
-            "index-input-param"
-            "index-query-button"
-            "lucid-output";      
-    }
-
-    .index-query-button{  
-        justify-content: center;
-    }  
+.lucid-output{
+    grid-area: lucid-output;
+    display:flex;  
+    overflow:auto;
+    margin:15px;
+    z-index: 10;
     
-    .api-display{
-        display:grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;    
-        grid-template-areas: 
-            "api-body-main"
-            "lucid-output"  ;      
-      }
 }
 
 pre{
@@ -209,4 +29,3 @@ pre{
 .overlay{
   opacity:.5;
 }
-
