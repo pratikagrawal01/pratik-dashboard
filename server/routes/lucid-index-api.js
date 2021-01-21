@@ -30,7 +30,7 @@ router.post('/lcudiApi', LogRequest , CheckUserAuthenticated, function(req, res)
     const request = https.request(Util.CreateRequestParam(req), (response) => {	
                                                             var dataQueue = "";
                                                             response.on('data', (data) => {
-                                                                dataQueue += data;																	
+                                                                dataQueue += data;
                                                             });
                                                             response.on('end', function() {
                                                                 return res.jsonp(dataQueue);

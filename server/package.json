@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js >./logs/app.log 2>&1"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,9 @@
     "node-rdpjs": "^0.3.0",
     "nodemailer": "^6.4.16",
     "nodemon": "^2.0.2",
+    "pm2": "^4.5.1",
     "require": "^2.4.20",
+    "serve": "^11.3.2",
     "winston": "^3.3.3",
     "winston-format-debug": "^1.0.3"
   }

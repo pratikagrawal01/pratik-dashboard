@@ -1,6 +1,8 @@
 exports._SUCCESS = 'success';
 exports._SESSION_TOKEN = 'session-token';
 exports._AUTH_USER = 'auth-user';
+exports._AUTH_PICTURE = 'auth-picture';
+exports._AUTH_EMAIL = 'auth-email';
 exports._DOMAIN = 'costco.com';
 
 /* Action button types*/

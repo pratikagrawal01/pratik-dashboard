@@ -14,7 +14,7 @@
     line-height: 4rem;
     font-size: 1.2rem;
     color: white;
-    width:80%;
+    width:75%;
 }
 
 .nav-menu {
@@ -107,12 +107,64 @@
 }
 
 
-.apps-logo{        
+.profile{        
     margin:20px 20px 5px 5px;   
-    width:5%
+    width:8%;
+    display: flex;    
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    display: none;
 }
 
-.apps-logo img{
-    height:3vh;
+.profile-logged-in{
+    background-color: rgba(255,2555,2555, .8);
+    border-radius:8px;
+    width:10rem;
+    height:3.6rem;
+    display:flex;
+    box-sizing: border-box;
+    align-items: center;
+    opacity: 0;
+    display: none;
+    cursor: pointer;    
+}
 
+.profile-logged-in img {
+    padding-left:.5rem;
+    height:1.5rem;
+}
+
+.profile-logged-in .profile-image {
+    border-radius:50%;
+    margin-left:1rem;    
+    height:2.6rem;
+    width:2.6rem;
+    z-index: 100;
+}
+
+.profileDetails{
+    color:white;
+    visibility: hidden;
+    opacity:0;
+    position:absolute;
+    background:rgba(60,64,67,0.90);
+    z-index: 1000;    
+    top:5.5rem;  
+    font-size: .6rem;
+    padding:5px;
+    display:block;
+    letter-spacing: 0.8px;    
+    transition: all 400ms ease;
+    max-width: 8rem;
+    overflow: hidden;
+}
+
+.profile-logged-in:hover> .profileDetails{
+    opacity:1;
+    visibility: visible;
+}
+
+.profileFullName,.profileEmail{
+    color:#bdc2c6;
 }

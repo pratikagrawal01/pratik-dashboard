@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
 import IosArrowDown from 'react-ionicons/lib/MdArrowDropdown';
 import IosArrowRight from 'react-ionicons/lib/MdArrowDropright';
+import IosContact from 'react-ionicons/lib/MdContact';
 import '../css/header.css';
 import Logo from '../images/Costco_Logo.png';
 import Apps_Logo from '../images/App_icon.svg'
@@ -68,9 +69,19 @@ function Header(){
                     </li>
                 </ul> 
             </nav>
-            <div className="apps-logo">
+            <div className="profile">
                 <span />
-                <img src={Apps_Logo} alt="logo" />   
+                <IosContact color="white" fontSize="3rem"/>
+            </div> 
+            <div className="profile-logged-in">
+                <img src={Logo} alt="logo" />
+                <div className="profile-image">                    
+                </div>
+                <div className="profileDetails">
+                    <div className="googleAccount">Google Account</div>
+                    <div className="profileFullName"></div>
+                    <div className="profileEmail"></div>
+                </div>
             </div>
         </div>
     )

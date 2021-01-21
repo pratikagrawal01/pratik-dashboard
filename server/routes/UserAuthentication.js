@@ -31,6 +31,8 @@ router.post('/validateLogin',  function(req,res){
                 if(domain==CONSTANTS._DOMAIN){
                     res.cookie(CONSTANTS._SESSION_TOKEN, token);
                     res.cookie(CONSTANTS._AUTH_USER, payload['name']);
+                    res.cookie(CONSTANTS._AUTH_PICTURE, payload['picture']);
+                    res.cookie(CONSTANTS._AUTH_EMAIL, payload['email']);
                     res.jsonp(CONSTANTS._SUCCESS);
                 }else {
                     res.jsonp(CONSTANTS._ERROR_AUTHENTICATION_FAILURE);

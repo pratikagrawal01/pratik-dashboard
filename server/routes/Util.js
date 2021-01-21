@@ -8,14 +8,15 @@ const CreateRequestParam = (req) => {
 	const environment = req.body.environment;
 	const location = req.body.location;
 	const api = req.body.api;
-	const queryParam = req.body.queryparam;	
+	const queryParam = req.body.queryParam;	
 	
 	var path=enpoints[site][location][api]['URL'];	
 	var key = envJson[site][environment][location]['KEY'];
+
 	if( typeof queryParam !== 'undefined' && api=='Query') {
 		path+=queryParam;		
 		key = envJson[site][environment][location]['SEARCH_KEY'];
-	}
+	} 	
 	var headers = {};
 	headers = {
 		'Content-Type':'application/json',

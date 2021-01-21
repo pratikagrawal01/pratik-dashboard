@@ -1,22 +1,4 @@
 /**This is to create a request body for Lucide index api call to backend */
-export const CreateQueryObject1=(el) => {
-    var element=el.target;
-    var site_element=document.querySelector('div.site-links >a.active');
-    var appliaction_element=document.querySelector('div.api-links >a.active');
-    var env_element=document.querySelector('div.env-links >a.active');
-    var location_element = element.closest('div.index-api-display').querySelector('a.location');   
-    var query_element=element.closest('div.index-api-display').querySelector('.input-param');    
-    var myObject = {};
-    myObject['application'] = appliaction_element.innerHTML;
-    myObject['site'] = site_element.innerHTML;
-    myObject['environment'] = env_element.innerHTML;
-    myObject['location'] = location_element.innerHTML;
-    myObject['api'] = element.id;
-    myObject['queryparam'] = query_element.value;
-    return myObject;    
-}
-
-/**This is to create a request body for Lucide index api call to backend */
 export const CreateQueryObject=(el) => {
     var element=el.target;
     var myObject = {};
@@ -26,6 +8,7 @@ export const CreateQueryObject=(el) => {
     myObject['site']= site.split('-')[0];
     myObject['location']= site.split('-')[1];
     myObject['api']= element.id;
+    myObject['queryParam']= document.querySelector('.index-search-query input').value;
     console.log(myObject);
     return myObject;    
 }
@@ -48,6 +31,28 @@ export const SyntaxHighlight=(json) => {
         }
         return '<span class="' + cls + '">' + match + '</span>';
     });
+}
+
+export const ValidateInputField=() => {
+    try{
+        findIdByText(document.querySelector("div.header-content a[id='Application']"));  
+    }catch(err){
+        document.querySelector('.lucid-output').querySelector('div.errorMsg span').innerHTML= "Error...!!Please Select the Application from the menu.";
+        return false;
+    }    
+    try{
+        findIdByText(document.querySelector("div.header-content a[id='Site']"));    
+    }catch(err){
+        document.querySelector('.lucid-output').querySelector('div.errorMsg span').innerHTML= "Error...!!Please Select the Site from the menu";
+        return false;
+    }
+    try{
+        findIdByText(document.querySelector("div.header-content a[id='Environment']")); 
+    }catch(err){
+        document.querySelector('.lucid-output').querySelector('div.errorMsg span').innerHTML= "Error...!!Please Select the Environment from the menu.";
+        return false;
+    }
+    return true;
 }
 
 function findIdByText(el){

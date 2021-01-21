@@ -7,17 +7,17 @@
         "api-body-main lucid-output"        
   }
   
-  .api-body-main{
+ .api-body-main{
     grid-area:api-body-main;
 }
 
-.lucid-output{
-    grid-area: lucid-output;
-    display:flex;  
-    overflow:auto;
-    margin:15px;
-    z-index: 10;
-    
+.errorMsg{
+    padding:3rem 0rem 0rem 0rem;
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    width:100%;
 }
 
 pre{
@@ -28,4 +28,61 @@ pre{
 
 .overlay{
   opacity:.5;
+}
+
+
+.index-search-box{    
+    position: absolute;
+    background:  #191919;
+    width:40vw;
+    height:20vh;
+    top:5%;
+    right:15%;
+    border: 1px solid rgba(255,2555,2555, .1);
+    z-index: 1000;
+    display:none;
+    align-items: center;    
+}
+
+.index-search-box-move {
+    height:15%;
+    background: grey;
+    cursor: move;
+    width:100%;
+}
+
+
+.index-search-query{  
+    width:70% ;
+    align-items: center;
+    border-bottom: 2px solid grey;
+    margin:20px;
+}
+
+
+.lucid-output{
+    grid-area: lucid-output; 
+    overflow:auto;
+    margin:15px;
+    z-index: 10;  
+}
+
+
+.index-search-query input{  
+    border:0;
+    padding:10px;
+    font-size:1.2rem;
+    color:inherit;    
+    background: transparent;
+    font-weight: inherit;
+    outline:0; 
+    width:95% ;
+    z-index: 2000;
+    margin-top:2rem;
+    
+} 
+
+.index-search-query svg{ 
+    width:5%;
+    cursor: pointer;
 }
