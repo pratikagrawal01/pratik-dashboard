@@ -4,6 +4,7 @@ import {CreateQueryObject, SyntaxHighlight , ValidateInputField} from './Util';
 import IosHelp from 'react-ionicons/lib/MdHelp';
 import IosHeart from 'react-ionicons/lib/MdHeart';
 import IosSearch from 'react-ionicons/lib/MdSearch';
+import IosClose from 'react-ionicons/lib/MdClose';
 import IosArrowRight from 'react-ionicons/lib/MdArrowDropright';
 import '../css/sidebar.css';
     
@@ -49,6 +50,10 @@ const enableSearch = el => {
     document.querySelector('.index-search-box').style.display="block";
 }
 
+const closeIcon = el => {
+    document.querySelector('.index-search-box').style.display="none";
+}
+
 function IndexApiDisplay(){
     return(
         <div className="api-display">
@@ -88,7 +93,10 @@ function IndexApiDisplay(){
                 </nav>
             </div>  
             <div className="index-search-box">
-                <div className="index-search-box-move">                    
+                <div className="index-search-box-move"> 
+                    <div className="icon">
+                        <IosClose color="Black" fontSize="1.5rem" onClick={(el) => closeIcon(el)} />
+                    </div>                   
                 </div>
                 <div className="index-search-query">
                         <input type="text" placeholder="_stage?q=kirkland&loc=847"/>
