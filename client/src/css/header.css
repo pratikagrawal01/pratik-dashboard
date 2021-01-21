@@ -66,6 +66,8 @@
     color:white;
     padding:  0 1.5rem;
     transition: color 650ms;
+    font-size:1.2rem;
+    text-decoration: none;
 }
 
 .nav-menu li:hover > .nav-sub-menu {
@@ -97,7 +99,7 @@
 }
 
 .logo-container {
-    width: 15%;
+    width: 20rem;
 }
 
 

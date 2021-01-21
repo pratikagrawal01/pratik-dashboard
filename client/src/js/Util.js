@@ -7,7 +7,7 @@ export const CreateQueryObject=(el) => {
     var site = findIdByText(document.querySelector("div.header-content a[id='Site']"));
     myObject['site']= site.split('-')[0];
     myObject['location']= site.split('-')[1];
-    myObject['api']= element.id;
+    myObject['api']= element.id;    
     myObject['queryParam']= document.querySelector('.index-search-query input').value;
     console.log(myObject);
     return myObject;    
