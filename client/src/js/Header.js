@@ -23,8 +23,7 @@ function Header(){
                         <a id="Application" href="#">{Api}<IosArrowDown color="white" fontSize=".8rem"/></a>
                         <ul className="nav-sub-menu">
                             <li><a id="API" href="#" onClick={e =>setApi(e.target.text)}>Index</a></li>
-                            <li><a id="FEED" href="#" onClick={e =>setApi(e.target.text)}>Feed</a></li>
-                            <li><a id="VM" href="#" onClick={e =>setApi(e.target.text)}>VM</a></li>
+                            <li><a id="Config" href="/config" onClick={e =>setApi(e.target.text)}>Config</a></li>
                         </ul>
                     </li>
                     <li> 

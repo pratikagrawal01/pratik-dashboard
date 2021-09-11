@@ -13,6 +13,7 @@ function Init_Nav_Link(){
     a_click.forEach(el => el.addEventListener('click', e=> setActive(el)))
 }
 
+/*This will fetch the user details from cookes and set the user profile*/
 function SetUserName(){
     const userName= Cookies.get('auth-user');
     const userImg= Cookies.get('auth-picture');

@@ -3,17 +3,17 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const https = require('https');
 
-const logger = require('./Logger.js');
-const Util = require('./Util.js');
-const CONSTANTS = require('./Constants.js');
+const logger = require('../public/js/custom/Logger.js');
+const Util = require('../public/js/custom/Util.js');
+const CONSTANTS = require('../public/js/custom/Constants.js');
 const UserAuthentication = require('./UserAuthentication');
 
 const router = express.Router();
 const CheckUserAuthenticated = UserAuthentication.CheckUserAuthenticated;
 const LogRequest= Util.LogRequest
 
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+router.use(express.urlencoded({ extended: false }));
+router.use(express.json());
 router.use(cookieParser());
 
 /* Makes call to Lucidworks for Index related APIs*/
@@ -27,7 +27,7 @@ router.post('/lcudiApi', LogRequest , CheckUserAuthenticated, function(req, res)
     }
     process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
     var dataString = '{"action": "start"}';
-    const request = https.request(Util.CreateRequestParam(req), (response) => {	
+    const request = https.request(Util.CreateRequestParam(req.body), (response) => {	
                                                             var dataQueue = "";
                                                             response.on('data', (data) => {
                                                                 dataQueue += data;

@@ -92,3 +92,36 @@ pre{
     width:5%;
     cursor: pointer;
 }
+
+.hidden-Response{
+    display:none;
+}
+
+.tool-buttons{
+    float:right;
+    margin-right:35px;
+    display:none;
+}
+
+.tool-buttons .tooltiptext {
+    position:absolute;
+    margin-top:30px;
+    opacity: 0;
+    font-size: 0.8rem;
+    background-image: linear-gradient(375deg,rgb(248, 214, 100),rgb(199, 209, 205));
+    color: rgb(22, 1, 1);    
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07);
+    padding: .55rem 1rem;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+}
+
+.tool-buttons:hover .tooltiptext {
+    opacity: 0.9;
+}

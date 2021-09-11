@@ -2,10 +2,11 @@ const express = require('express');
 const { addColors } = require('winston/lib/winston/config');
 const app = express();
 const PORT= process.env.PORT || 5000;
-const logger = require('./routes/Logger.js'); 
+const logger = require('./public/js/custom/Logger.js'); 
 
 const IndexRouter = require('./routes/lucid-index-api');
 const AuthenticationRouter = require('./routes/UserAuthentication');
+const CronJobRouter = require('./routes/cron-job');
 app.use(IndexRouter);
 app.use(AuthenticationRouter.Router);
 

@@ -64,3 +64,56 @@ function findIdByText(el){
     });
     return element.id;
 }
+
+export const EnableSearch = el => {  
+    //document.querySelector('.lucid-output').querySelector('span').innerHTML="";
+    document.querySelector('.index-search-box').style.display="block";
+}
+
+export const CloseIcon = el => {
+    document.querySelector('.index-search-box').style.display="none";
+}
+
+export const CopyText = el => {
+    navigator.clipboard.writeText(document.querySelector('.lucid-output').querySelector('.hidden-Response').innerHTML);
+}
+
+export const MakeApiCall = el => {  
+    if(!ValidateInputField()){
+        return;
+    }        
+    document.querySelector('body').classList.add('overlay');
+    fetch('/api/lcudiApi', {
+       method:'POST',
+       dataType:'jsonp',
+       headers:{
+           "Content-Type": "application/json"
+       },
+       body:JSON.stringify(CreateQueryObject(el))
+    }).then((result)=>{
+        result.json().then((resp)=>{
+           document.querySelector('.lucid-output').querySelector('span').innerHTML=SyntaxHighlight(resp);
+           document.querySelector('.lucid-output').querySelector('.hidden-Response').innerHTML=resp;
+           if(resp=='Authentication Failure'){
+                window.location.replace("/login");
+           }
+       })       
+       document.querySelector('.lucid-output').querySelector('.tool-buttons').style.display="block";
+       document.querySelector('body').classList.remove('overlay');
+   }).catch(err=>{
+        document.querySelector('body').classList.remove('overlay');
+        console.log(err);   
+        document.querySelector('.lucid-output').querySelector('.tool-buttons').style.display="none";        
+   })
+}
+
+export const MakeIndexApiCall = el => {  
+    document.querySelector('.index-search-box').style.display="none";
+    MakeApiCall(el);
+} 
+
+export const MakeSearchApiCall = el => {   
+    el.target.id='Query';   
+    MakeApiCall(el);
+}
+

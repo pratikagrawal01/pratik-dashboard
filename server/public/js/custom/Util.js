@@ -1,15 +1,15 @@
-const envJson = require('../public/json/env.json');
-const enpoints = require('../public/json/endpoints.json');
+const envJson = require('../../json/env.json');
+const enpoints = require('../../json/endpoints.json');
 const logger = require('./Logger.js');
 
-const CreateRequestParam = (req) => {
+const CreateRequestParam = (jsonbody) => {
 	
-	const site = req.body.site;
-	const environment = req.body.environment;
-	const location = req.body.location;
-	const api = req.body.api;
-	const queryParam = req.body.queryParam;	
-	
+	const site = jsonbody.site;
+	const environment = jsonbody.environment;
+	const location = jsonbody.location;
+	const api = jsonbody.api;
+	const queryParam = jsonbody.queryParam;	
+	logger.info(`site =${site} , location = ${location} , api = ${api}`);
 	var path=enpoints[site][location][api]['URL'];	
 	var key = envJson[site][environment][location]['KEY'];
 

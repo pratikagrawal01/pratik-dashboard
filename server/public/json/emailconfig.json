@@ -1,0 +1,16 @@
+{
+	"Item-Api-History": {
+		"From": "Costco Index Monitor<IndexMonitor@costco-support.com>",
+		"To": "is_ecom_wcs@costco.com, IT - eCom Search Pod <it-ecomsearchpod@costco.com>",
+		"CC": "Fathima Saifunnissa <fsaifun@costco.com>, Mark Sage <msage@costco.com> ,Senthil Prakash Velusamy <svelusamy@costco.com>, Pratik Agrawal <c_pagrawal@costco.com>,Hitesh Karunakara Shetty <hshetty@costco.com>, Krishna Prasad Sivadas <ksivadas@costco.com>, Paul Chacko <pchacko@costco.com>",
+		"Subject": "Alert!!Lucidworks Delta feed stopped",
+		"Intro": "`Lucidworks Delta Feed in ${environment} for ${site}${location} has stopped. It has not been running since ${new Date(date).toLocaleString()}`"
+	},
+	"Item-Stg-Live-History": {
+		"From": "Costco Index Monitor<IndexMonitor@costco-support.com>",
+		"To": "is_ecom_wcs@costco.com, IT - eCom Search Pod <it-ecomsearchpod@costco.com>",
+	  	"CC": "Fathima Saifunnissa <fsaifun@costco.com>, Mark Sage <msage@costco.com> ,Senthil Prakash Velusamy <svelusamy@costco.com>, Pratik Agrawal <c_pagrawal@costco.com>,Hitesh Karunakara Shetty <hshetty@costco.com>, Krishna Prasad Sivadas <ksivadas@costco.com>, Paul Chacko <pchacko@costco.com>",
+	  	"Subject": "Alert: Lucidworks Stage Prop did not run today",
+		"Intro": "`Lucidworks Stage Prop in ${environment} for ${site}${location} did not trigger today. It has not been running since ${new Date(date).toLocaleString()}`"
+	  }
+  }

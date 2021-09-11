@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const router = express.Router();
-const logger = require('./Logger.js');
-const CONSTANTS = require('./Constants.js');
+const logger = require('../public/js/custom/Logger.js');
+const CONSTANTS = require('../public/js/custom/Constants.js');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
