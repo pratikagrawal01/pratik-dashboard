@@ -7,10 +7,10 @@ const EmailNotification = require('../public/js/custom/EmailNotification.js');
 
 /* check schedule to monitor Indexing history for BC and BD*/
 cron.schedule('*/15 * * * *',function() {	
-	checkScheduleApiHistory('BC','US','Item-Api-History');
-	checkScheduleApiHistory('BC','CA','Item-Api-History');
-	checkScheduleApiHistory('BD','US','Item-Api-History');
-	checkScheduleApiHistory('BD','CA','Item-Api-History');
+	checkScheduleApiHistory('BC','US','Item-Api-History',1);
+	checkScheduleApiHistory('BC','CA','Item-Api-History',1);
+	checkScheduleApiHistory('BD','US','Item-Api-History',1);
+	checkScheduleApiHistory('BD','CA','Item-Api-History',1);
 });
 
 /* check schedule to monitor Index Prop history for BC*/
@@ -20,8 +20,8 @@ cron.schedule('0 2,12 * * *',function() {
 	if( (checkDay==6 || checkDay ==0) && (checkHour==12) ){
 		logger.info('Stage prop monitor will not run for BC at day '+ checkDay + ' and hour '+checkHour);
 	}else {		
-	    checkScheduleApiHistory('BC','US','Item-Stg-Live-History');
-	    checkScheduleApiHistory('BC','CA','Item-Stg-Live-History');
+	    checkScheduleApiHistory('BC','US','Item-Stg-Live-History',4);
+	    checkScheduleApiHistory('BC','CA','Item-Stg-Live-History',4);
     }
 });
 
@@ -32,13 +32,13 @@ cron.schedule('0 3,10 * * *',function() {
 	if( (checkDay==6 || checkDay ==0)){
 		logger.info('Stage prop monitor will not run for BD at day '+ checkDay + ' and hour '+checkHour);
 	}else {
-	    checkScheduleApiHistory('BD','US','Item-Stg-Live-History');
-	    checkScheduleApiHistory('BD','CA','Item-Stg-Live-History');
+	    checkScheduleApiHistory('BD','US','Item-Stg-Live-History',4);
+	    checkScheduleApiHistory('BD','CA','Item-Stg-Live-History',4);
     }
 });
 
 
-function checkScheduleApiHistory(site,location,api){
+function checkScheduleApiHistory(site,location,api,checkHour){
 	var jsonBody = {
                         application: 'api',
                         site: site,
@@ -54,7 +54,7 @@ function checkScheduleApiHistory(site,location,api){
 																response.on('data', (data) => {
 																	dataQueue += data;																	
 																});
-																let checkTime = new Date(new Date().setHours(new Date().getHours() - 1));
+																let checkTime = new Date(new Date().setHours(new Date().getHours() - checkHour));
 																response.on('end', function() {
 																	var myJson=JSON.parse(dataQueue);
 																	if(myJson=='undefined' ||  myJson.length==0 || new Date(myJson[0].endTime) < checkTime){
