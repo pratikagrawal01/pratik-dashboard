@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CreateQueryObject, SyntaxHighlight , ValidateInputField , MakeApiCall, MakeIndexApiCall, MakeSearchApiCall,EnableSearch,CloseIcon,CopyText} from './Util';
+import {CreateQueryObject, SyntaxHighlight , ValidateInputField , MakeApiCall, MakeIndexApiCall, MakeSearchApiCall,EnableSearch,GetIndexCount,CloseIcon,CopyText} from './Util';
 import IosHelp from 'react-ionicons/lib/MdHelp';
 import IosHeart from 'react-ionicons/lib/MdHeart';
 import IosSearch from 'react-ionicons/lib/MdSearch';
@@ -43,6 +43,7 @@ function IndexApiDisplay(){
                                 </ul>
                         </li>
                         <li><a href="#">Mega-Menu</a></li>
+                        <li><a href="#" onClick={el => GetIndexCount(el)}>Lucid-Index-Size</a></li>
                         <li><a href="#" onClick={el => EnableSearch(el)}>Search-Query</a></li>
                         <li><a href="/about"><IosHelp color="white" fontSize="1.2rem" beat={true}/>About</a></li>   
                     </ul>

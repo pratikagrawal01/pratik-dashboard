@@ -79,6 +79,25 @@ main {
     /*  font-family:'Times New Roman', Times, serif;     */   
     color:#b9b3b3;
 }
+
+
+th {
+    color:green;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+tbody {
+    color:white;
+    text-align: center;
+}
+table, th, td {
+    border: 2px solid rgba(235, 229, 229, 0.2);
+    padding: 4px;
+}
+table {
+    width: 50%;
+}
+
 /* 
 @media screen and (max-width: 1024px){
     main {

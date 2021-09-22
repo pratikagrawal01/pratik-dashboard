@@ -1,3 +1,5 @@
+import {SyntaxHighlight,CreateTable} from './Styler';
+
 /**This is to create a request body for Lucide index api call to backend */
 export const CreateQueryObject=(el) => {
     var element=el.target;
@@ -11,26 +13,6 @@ export const CreateQueryObject=(el) => {
     myObject['queryParam']= document.querySelector('.index-search-query input').value;
     console.log(myObject);
     return myObject;    
-}
-
-/**This is to pretty print the JSON response from lucid with  colors */
-export const SyntaxHighlight=(json) => {
-    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g, function (match) {
-        var cls = 'number';
-        if (/^"/.test(match)) {
-            if (/:$/.test(match)) {
-                cls = 'key';
-            } else {
-                cls = 'string';
-            }
-        } else if (/true|false/.test(match)) {
-            cls = 'boolean';
-        } else if (/null/.test(match)) {
-            cls = 'null';
-        }
-        return '<span class="' + cls + '">' + match + '</span>';
-    });
 }
 
 export const ValidateInputField=() => {
@@ -83,7 +65,7 @@ export const MakeApiCall = el => {
         return;
     }        
     document.querySelector('body').classList.add('overlay');
-    fetch('/api/lcudiApi', {
+    fetch('/api/lucidApi', {
        method:'POST',
        dataType:'jsonp',
        headers:{
@@ -117,3 +99,34 @@ export const MakeSearchApiCall = el => {
     MakeApiCall(el);
 }
 
+
+export const GetIndexCount = el => {
+    if(!ValidateInputField()){
+        return;
+    }    
+    el.target.id='Query';    
+    document.querySelector('body').classList.add('overlay');
+    fetch('/api/getIndexCount', {
+       method:'POST',
+       dataType:'jsonp',
+       headers:{
+           "Content-Type": "application/json"
+       },
+       body:JSON.stringify(CreateQueryObject(el))
+    }).then((result)=>{
+        result.json().then((resp)=>{
+            if(resp=='Authentication Failure'){
+                window.location.replace("/login");
+            }
+            document.querySelector('.lucid-output').querySelector('span').innerHTML="";
+            document.querySelector('.lucid-output').querySelector('span').appendChild(CreateTable(resp));
+            document.querySelector('.lucid-output').querySelector('.hidden-Response').innerHTML=resp;           
+       })       
+       document.querySelector('.lucid-output').querySelector('.tool-buttons').style.display="block";
+       document.querySelector('body').classList.remove('overlay');
+   }).catch(err=>{
+        document.querySelector('body').classList.remove('overlay');
+        console.log(err);   
+        document.querySelector('.lucid-output').querySelector('.tool-buttons').style.display="none";        
+   })
+}

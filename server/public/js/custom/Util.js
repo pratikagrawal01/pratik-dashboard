@@ -9,7 +9,6 @@ const CreateRequestParam = (jsonbody) => {
 	const location = jsonbody.location;
 	const api = jsonbody.api;
 	const queryParam = jsonbody.queryParam;	
-	logger.info(`site =${site} , location = ${location} , api = ${api}`);
 	var path=enpoints[site][location][api]['URL'];	
 	var key = envJson[site][environment][location]['KEY'];
 

@@ -1,0 +1,90 @@
+{
+  "BC": {
+    "US": {
+      "contracts": [
+		"847",
+        "115-bd",
+        "283-bd",
+        "561-bd",
+        "563-bd",
+        "579-bd",
+        "580-bd",
+        "650-bd",
+        "651-bd",
+        "652-bd",
+        "653-bd",
+        "654-bd",
+        "655-bd",
+        "725-bd",
+        "729-bd",
+        "731-bd",
+        "758-bd",
+        "827-bd",
+        "848-bd",
+        "893-bd",
+        "951-bd",
+        "952-bd"
+      ],
+      "queryParam1": "?q=*:*&loc=contract&locale=en-US&rows=0"
+    },
+    "CA": {
+      "contracts": [
+		"894",
+        "1436-bd",
+        "559-bd",
+        "595-bd",
+        "656-bd",
+        "792-bd",
+        "801-bd",
+        "802-bd",
+        "946-bd",
+        "993-bd"
+      ],
+      "queryParam1": "?q=*:*&loc=contract&locale=en-CA&rows=0",
+      "queryParam2": "?q=*:*&loc=contract&locale=fr-CA&rows=0"
+    }
+  },
+  "BD": {
+    "US": {
+      "contracts": [
+		"888",
+        "113",
+        "115",
+        "1487",
+        "563",
+        "564",
+        "569",
+        "578",
+        "579",
+        "580",
+        "650",
+        "651",
+        "652",
+        "653",
+        "654",
+        "655",
+        "729",
+        "767",
+        "823",
+        "827",
+        "848",
+        "893",
+        "943",
+        "947"
+      ],
+      "queryParam1": "?q=*:*&loc=contract&locale=en-US&rows=0"
+    },
+    "CA": {
+      "contracts": [
+		"889",
+        "1436",
+        "595",
+        "656",
+        "801",
+        "802"
+      ],
+      "queryParam1": "?q=*:*&loc=contract&locale=en-CA&rows=0",
+      "queryParam2": "?q=*:*&loc=contract&locale=fr-CA&rows=0"
+    }
+  }
+}
