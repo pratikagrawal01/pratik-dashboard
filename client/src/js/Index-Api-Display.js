@@ -42,7 +42,7 @@ function IndexApiDisplay(){
                                     <li><a id="Item-Location-Stg-Live-History" href="#" onClick={el => MakeIndexApiCall(el)}>Get Index History</a></li>
                                 </ul>
                         </li>
-                        <li><a href="#">Mega-Menu</a></li>
+                        <li><a href="#" id="Mega-Menu" onClick={el => MakeIndexApiCall(el)}>Mega-Menu</a></li>
                         <li><a href="#" onClick={el => GetIndexCount(el)}>Lucid-Index-Size</a></li>
                         <li><a href="#" onClick={el => EnableSearch(el)}>Search-Query</a></li>
                         <li><a href="/about"><IosHelp color="white" fontSize="1.2rem" beat={true}/>About</a></li>   

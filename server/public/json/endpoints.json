@@ -33,6 +33,10 @@
             "METHOD":"GET",
             "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_stage_to_live/history"
         },
+		"Mega-Menu": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_com/query/www_costco_com_megamenu"
+        },
 		"Query": {
             "METHOD":"GET",
             "URL":"/api/apps/www_costco_com/query/www_costco_com_search"
@@ -70,6 +74,10 @@
         "Item-Location-Stg-Live-History": {
             "METHOD":"GET",
             "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_stage_to_live/history"
+        },
+		"Mega-Menu": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costco_ca/query/www_costco_ca_megamenu"
         },
 		"Query": {
             "METHOD":"GET",
@@ -111,6 +119,10 @@
             "METHOD":"GET",
             "URL":"/api/apps/www_costcobusinessdelivery_com/jobs/datasource:www_costcobusinessdelivery_com_stage_to_live/history"
         },
+		"Mega-Menu": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinessdelivery_com/query/www_costcobusinessdelivery_com_megamenu"
+        },
 		"Query": {
             "METHOD":"GET",
             "URL":"/api/apps/www_costcobusinessdelivery_com/query/www_costcobusinessdelivery_com_search"
@@ -148,6 +160,10 @@
         "Item-Location-Stg-Live-History": {
             "METHOD":"GET",
             "URL":"/api/apps/www_costcobusinesscentre_ca/jobs/datasource:www_costcobusinesscentre_ca_stage_to_live/history"
+        },
+		"Mega-Menu": {
+            "METHOD":"GET",
+            "URL":"/api/apps/www_costcobusinesscentre_ca/query/www_costcobusinesscentre_ca_megamenu"
         },
 		"Query": {
             "METHOD":"GET",

@@ -10,9 +10,9 @@ const CreateRequestParam = (jsonbody) => {
 	const api = jsonbody.api;
 	const queryParam = jsonbody.queryParam;	
 	var path=enpoints[site][location][api]['URL'];	
-	var key = envJson[site][environment][location]['KEY'];
+	var key=envJson[site][environment][location]['KEY'];
 
-	if( typeof queryParam !== 'undefined' && api=='Query') {
+	if( typeof queryParam !== 'undefined' && (api=='Query' || api=='Mega-Menu')) {
 		path+=queryParam;		
 		key = envJson[site][environment][location]['SEARCH_KEY'];
 	} 	
