@@ -19,11 +19,11 @@
         },
         "Item-Api-History": {
             "METHOD":"GET",
-            "URL":"/api/jobs/datasource:www_costco_com_item_read_items_from_crud/history"
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item_read_items_from_crud/history"
         },
         "Item-Location-Api-History": {
             "METHOD":"GET",
-            "URL":"/api/jobs/datasource:www_costco_com_read_locations_from_crud/history"
+            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_read_locations_from_crud/history"
         },
         "Item-Stg-Live-History": {
             "METHOD":"GET",
