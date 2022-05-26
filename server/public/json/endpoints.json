@@ -19,11 +19,11 @@
         },
         "Item-Api-History": {
             "METHOD":"GET",
-            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item/history"
+            "URL":"/api/jobs/datasource:www_costco_com_item_read_items_from_crud/history"
         },
         "Item-Location-Api-History": {
             "METHOD":"GET",
-            "URL":"/api/apps/www_costco_com/jobs/datasource:www_costco_com_item_location/history"
+            "URL":"/api/jobs/datasource:www_costco_com_read_locations_from_crud/history"
         },
         "Item-Stg-Live-History": {
             "METHOD":"GET",
@@ -59,13 +59,13 @@
             "METHOD":"POST",
             "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_stage_to_live/actions"
         },
-        "Item-Api-History": {
+        "Item-Api-History": { 
             "METHOD":"GET",
-            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item/history"
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_read_items_from_crud/history"
         },
         "Item-Location-Api-History": {
             "METHOD":"GET",
-            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_location/history"
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_read_locations_from_crud/history"
         },
         "Item-Stg-Live-History": {
             "METHOD":"GET",
