@@ -23,7 +23,7 @@ function App(){
           <RouteConfig />
         </Route>
         <Route path="/">
-          <RouteMain />
+          <RouteLogin />
         </Route>
       </Switch>
     </Router>    

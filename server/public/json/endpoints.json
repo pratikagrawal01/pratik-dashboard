@@ -61,7 +61,7 @@
         },
         "Item-Api-History": { 
             "METHOD":"GET",
-            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item_read_items_from_crud/history"
+            "URL":"/api/apps/www_costco_ca/jobs/datasource:www_costco_ca_item/history"
         },
         "Item-Location-Api-History": {
             "METHOD":"GET",

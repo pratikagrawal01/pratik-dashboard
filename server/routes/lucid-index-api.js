@@ -19,13 +19,9 @@ router.use(express.json());
 router.use(cookieParser());
 
 /* Makes call to Lucidworks for Index related APIs*/
-router.post('/lucidApi', LogRequest , CheckUserAuthenticated, function(req, res){
-    const environment = req.body.environment;
-    const api = req.body.api;
-    if((environment == CONSTANTS._ENV_PROD || environment == CONSTANTS._ENV_PROD)){
-        if(!api.includes(CONSTANTS._BUTTON_API_HISTORY) && api!=CONSTANTS._BUTTON_SEARCH_QUERY) {
-            return res.jsonp(CONSTANTS._ERROR_PROD_NOT_AUTHORIZED);	
-        }			
+router.post('/lucidApi', LogRequest , CheckUserAuthenticated, function(req, res){   
+    if(!Util.isRequestAllowed(req)){
+        return res.jsonp(CONSTANTS._ERROR_PROD_NOT_AUTHORIZED);	
     }
     process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
     var dataString = '{"action": "start"}';
@@ -47,12 +43,8 @@ router.post('/lucidApi', LogRequest , CheckUserAuthenticated, function(req, res)
 
 /* Makes call to Lucidworks for Index related APIs*/
 router.post('/getIndexCount', LogRequest , CheckUserAuthenticated, async function(req, res){
-    const environment = req.body.environment;
-    const api = req.body.api;
-    if((environment == CONSTANTS._ENV_PROD || environment == CONSTANTS._ENV_PROD)){
-        if(!api.includes(CONSTANTS._BUTTON_API_HISTORY) && api!=CONSTANTS._BUTTON_SEARCH_QUERY) {
-            return res.jsonp(CONSTANTS._ERROR_PROD_NOT_AUTHORIZED);	
-        }			
+    if(!Util.isRequestAllowed(req)){
+        return res.jsonp(CONSTANTS._ERROR_PROD_NOT_AUTHORIZED);	
     }   
     res.jsonp(await getIndexCallMediator(req));
 });

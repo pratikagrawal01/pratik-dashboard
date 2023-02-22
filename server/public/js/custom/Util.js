@@ -1,6 +1,7 @@
 const envJson = require('../../json/env.json');
 const enpoints = require('../../json/endpoints.json');
 const logger = require('./Logger.js');
+const CONSTANTS = require('./Constants.js');
 
 const CreateRequestParam = (jsonbody) => {
 	
@@ -37,5 +38,17 @@ const LogRequest = (req,res,next) => {
     next();
 }
 
+const isRequestAllowed=(req) => {
+    const environment = req.body.environment;
+    const api = req.body.api;
+    if((environment == CONSTANTS._ENV_PROD || environment == CONSTANTS._ENV_PROD)){
+        if(!api.includes(CONSTANTS._BUTTON_API_HISTORY) && api!=CONSTANTS._BUTTON_SEARCH_QUERY && api!=CONSTANTS._BUTTON_MEGA_MENU) {
+            return false;	
+        }			
+    }
+    return true;
+}
+
 module.exports.CreateRequestParam =  CreateRequestParam;
 module.exports.LogRequest =  LogRequest;
+module.exports.isRequestAllowed =  isRequestAllowed;

@@ -8,6 +8,7 @@ exports._DOMAIN = 'costco.com';
 /* Action button types*/
 exports._BUTTON_API_HISTORY = 'History'
 exports._BUTTON_SEARCH_QUERY = 'Query'
+exports._BUTTON_MEGA_MENU = 'Mega-Menu'
 
 
 /* Error messages */
