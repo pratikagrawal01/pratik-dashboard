@@ -17,7 +17,7 @@ function SendEmailNotiification(api,date,site,location,environment){
 		theme: 'salted',
 		product: {
 			name: 'Index Monitor',
-			link: 'http://ec2-18-220-54-17.us-east-2.compute.amazonaws.com/login'
+			link: 'http://ec2-34-211-56-128.us-west-2.compute.amazonaws.com/login'
 		}
 	});
 	var email = {
